@@ -1,0 +1,17 @@
+﻿<h1>Account List</h1>
+
+<table>
+    <td></td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td></td>
+    <tr ng-repeat="user in vm.users">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>   <a href="" ng-click="vm.editUser(user._id)">Edit</a> </td>
+    </tr>
+</table>
+
+<button class="btn btn-primary" ng-click="vm.addUser()">Add</button>
+
